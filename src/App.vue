@@ -17,6 +17,12 @@
 
   </header>
   <main>
+    <section class="c-section__first">
+      <picture>
+        <source media="(min-width:768px)" srcset="./assets/imgs/main_desktop.webp"> 
+        <img class="c-section__hero-img" src="./assets/imgs/main_mobile.webp" alt="hero-img">
+      </picture>
+    </section>
   </main>
   <footer>
 
@@ -43,6 +49,17 @@
   }
   &__flag{
     max-width: 2rem;
+  }
+}
+
+.c-section{
+  &__first{
+    max-height: 600px;
+    overflow: hidden;
+  }
+  &__hero-img{
+    width: 100%;
+    height: auto;
   }
 }
 
