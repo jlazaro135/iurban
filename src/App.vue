@@ -18,10 +18,16 @@
   </header>
   <main>
     <section class="c-section__first">
-      <picture>
-        <source media="(min-width:768px)" srcset="./assets/imgs/main_desktop.webp"> 
-        <img class="c-section__hero-img" src="./assets/imgs/main_mobile.webp" alt="hero-img">
-      </picture>
+      <div class="c-section__img-text">
+        <picture>
+          <source media="(min-width:768px)" srcset="./assets/imgs/main_desktop.webp"> 
+          <img class="c-section__hero-img" src="./assets/imgs/main_mobile.webp" alt="hero-img">
+        </picture>
+        <div class="o-container c-section__first-text-wrapper">
+          <h1>Valencia</h1>
+          <p>Descubre cómo podrías informar y registrar a los turistas con nuestra inteligencia artificial 24/7</p>
+        </div>
+    </div>
     </section>
   </main>
   <footer>
@@ -35,7 +41,7 @@
 .c-header {
   background-color: $primary;
   &__wrapper{
-    padding: 1rem;
+    padding: 1rem 0;
     display: flex;
     align-items: center;
   }
@@ -54,12 +60,24 @@
 
 .c-section{
   &__first{
-    max-height: 600px;
-    overflow: hidden;
+    position: relative;
   }
   &__hero-img{
     width: 100%;
     height: auto;
+    filter: brightness(65%);
+  }
+  &__img-text{
+    position: relative    
+  }
+  &__first-text-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    margin: auto;
+    color: #fff;
   }
 }
 
