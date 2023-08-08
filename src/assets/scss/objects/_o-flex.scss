@@ -1,0 +1,9 @@
+.o-flex{
+    display: flex;
+    &-jcc{
+        justify-content: center;
+    }
+    &-wrap{
+        flex-wrap: wrap;
+    }
+}
