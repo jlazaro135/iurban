@@ -1,0 +1,23 @@
+.o-slider{
+    padding: 0.5rem;
+    &__heading{
+        display: inline-block;
+        font-weight: 500;
+        margin: 0;
+        padding: 0.5rem;
+        border-radius: 10px 10px 0 0;
+        &--highlight{
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+    &__row{
+        display: flex;
+        gap: 1rem;
+        padding: 0.5rem;
+        border-radius: 0 10px 10px;
+        &--highlight{
+            background-color: $primary;
+        }
+    }
+}

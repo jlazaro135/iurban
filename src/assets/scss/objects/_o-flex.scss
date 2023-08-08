@@ -1,7 +1,13 @@
 .o-flex{
     display: flex;
+    &-jcb{
+        justify-content: space-between;
+    }
     &-jcc{
         justify-content: center;
+    }
+    &-aic{
+        align-items: center;
     }
     &-wrap{
         flex-wrap: wrap;

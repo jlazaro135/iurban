@@ -48,11 +48,67 @@
             </p>
           </div>
         </div>
-        <div class="c-section__second-filter o-flex o-flex-jcc o-flex-wrap">
-          <p>También puedes crear tu propia ruta, desde cero:</p>
+        <div class="c-section__second-filter o-flex o-flex-jcb o-flex-aic o-gap-2">
+          <p class="c-section__second-para">También puedes crear tu propia ruta, desde cero:</p>
           <div class="o-btn o-btn__primary">
             <CogIcon/>
             <span>Filtro</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="c-section__third">
+      <div class="o-container">
+        <div class="o-slider">
+          <h2 class="o-slider__heading">
+            Free tours >>
+          </h2>
+          <div class="o-slider__row">
+            <div class="o-card">
+              <div class="o-card-img-wrapper">
+                <img class="o-card-img" src="https://picsum.photos/500/300.webp" alt="foto" width="500" height="300">
+              </div>
+              <div class="o-card-desc-wrapper">
+                <div class="o-card-desc">
+                  <span>Palacio de las artes</span>
+                  <span>📍 a 2,2kms</span>
+                </div>
+                <div class="o-card-more">
+                  +
+                </div>
+              </div>
+              <div class="o-card-duration-badge">
+                <div class="o-card-duration">
+                  &#x23f2; 1.30h
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-slider">
+          <h2 class="o-slider__heading o-slider__heading--highlight">
+            Free tours >>
+          </h2>
+          <div class="o-slider__row o-slider__row--highlight">
+            <div class="o-card">
+              <div class="o-card-img-wrapper">
+                <img class="o-card-img" src="https://picsum.photos/500/300.webp" alt="foto" width="500" height="300">
+              </div>
+              <div class="o-card-desc-wrapper">
+                <div class="o-card-desc">
+                  <span>Palacio de las artes</span>
+                  <span>📍 a 2,2kms</span>
+                </div>
+                <div class="o-card-more">
+                  +
+                </div>
+              </div>
+              <div class="o-card-duration-badge">
+                <div class="o-card-duration">
+                  &#x23f2; 1.30h
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -68,6 +124,10 @@
 
 .c-header {
   background-color: $primary;
+  box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.27);
+  position: sticky;
+  top: 0;
+  z-index: 9 ;
   &__wrapper{
     padding: 1rem 0;
     display: flex;
@@ -116,10 +176,15 @@
   }
   &__second{
     position: relative;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
   }
   &__second-pills{
     position: relative;
     top: -50px;
+  }
+  &__second-para{
+    color: $primary;
+    font-size: 1.5rem;
   }
 }
 
