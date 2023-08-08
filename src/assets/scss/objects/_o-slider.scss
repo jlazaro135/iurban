@@ -1,5 +1,5 @@
 .o-slider{
-    padding: 0.5rem;
+    padding: 1rem;
     &__heading{
         display: inline-block;
         font-weight: 500;
@@ -12,10 +12,27 @@
         }
     }
     &__row{
-        display: flex;
-        gap: 1rem;
         padding: 0.5rem;
         border-radius: 0 10px 10px;
+        overflow: visible;
+        .splide__list{
+            padding: 1rem 0!important;
+        }
+        .splide__arrow{
+            border: 2px solid $primary;
+            background-color: #fff;
+            opacity: 1;
+            font-size: 1.5rem;
+            &:disabled{
+                display: none;
+            }
+            &--prev{
+                left: -20px;
+            }
+            &--next{
+                right: -20px;
+            }
+        }
         &--highlight{
             background-color: $primary;
         }

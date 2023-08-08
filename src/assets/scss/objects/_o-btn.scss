@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     gap: 0.3rem;
+    transition: all 0.2s;
     > svg {
         max-width: 25px;
         max-height: 25px;
@@ -13,13 +14,13 @@
         color: $primary;
         border: 2px solid $primary;
         > svg {
+            transition: all 0.2s;
             fill: $primary;
             stroke: $primary;
         }
         &:hover {
             background-color: $primary;
             color: #fff;
-            border-color: #fff;
             > svg {
                 fill: #fff;
                 stroke: #fff;
