@@ -1,0 +1,19 @@
+.o-btn {
+    padding: 0.3rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    > svg {
+        max-width: 25px;
+        max-height: 25px;
+    }
+    &__primary{
+        color: $primary;
+        border: 1px solid $primary;
+        > svg {
+            fill: $primary;
+            stroke: $primary;
+        }
+    }
+}

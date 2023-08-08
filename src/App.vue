@@ -2,6 +2,7 @@
   import HomeIcon from './assets/icons/homeIcon.vue'
   import WorldwideIcon from './assets/icons/WorldwideIcon.vue'
   import RouteIcon from './assets/icons/RouteIcon.vue'
+  import CogIcon from './assets/icons/CogIcon.vue';
 </script>
 
 <template>
@@ -48,7 +49,11 @@
           </div>
         </div>
         <div class="c-section__second-filter o-flex o-flex-jcc o-flex-wrap">
-          <p></p>
+          <p>También puedes crear tu propia ruta, desde cero:</p>
+          <div class="o-btn o-btn__primary">
+            <CogIcon/>
+            <span>Filtro</span>
+          </div>
         </div>
       </div>
     </section>
