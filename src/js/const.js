@@ -1,0 +1,1 @@
+export const API_URL = `https://cicerone.cms-iurban.com/api/getCityData/8`

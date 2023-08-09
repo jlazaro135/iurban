@@ -1,0 +1,41 @@
+.c-section {
+    &__hero {
+      position: relative;
+    }
+    &__hero-img {
+      width: 100%;
+      height: auto;
+      filter: brightness(65%);
+    }
+    &__img-text {
+      position: relative    
+    }
+    &__hero-text-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      margin: auto;
+      color: #fff;
+    }
+    &__hero-heading {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+    &__hero-subheading {
+      font-size: 0.875rem;
+    }
+    &__info{
+      position: relative;
+      box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+    }
+    &__info-pills{
+      position: relative;
+      top: -50px;
+    }
+    &__info-para{
+      color: $primary;
+      font-size: 1.5rem;
+    }
+  }

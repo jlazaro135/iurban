@@ -1,0 +1,24 @@
+.c-header {
+    background-color: $primary;
+    box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.27);
+    position: sticky;
+    top: 0;
+    z-index: 9 ;
+    &__wrapper{
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+    }
+    &__logo{
+      filter: brightness(0) invert(1);
+    }
+    &__language-wrapper{
+      display: flex;
+      gap: 0.5rem;
+      margin-left: auto;
+    }
+    &__flag{
+      max-width: 2rem;
+    }
+  }
+  
