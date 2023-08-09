@@ -12,9 +12,15 @@
     padding: '.5rem',
     pagination: false,
     breakpoints: {
-      992: {
-        perPage: 2,
-      }
+        500: {
+            perPage: 1,
+        },
+        992: {
+            perPage: 2,
+        },
+        1380: {
+            perPage: 3,
+        }
     }
   }
 
@@ -24,8 +30,6 @@ const props =  defineProps({
   })
 
 const {cardData} = props
-
-console.log(cardData)
 
 </script>
 
@@ -44,11 +48,10 @@ console.log(cardData)
                     <div class="o-card-desc-wrapper">
                         <div class="o-card-desc">
                             <span>{{slide.name.es}}</span>
-                            
-                            <span>📍 a {{calculateDistance(coord(cardData.data)[index].lat, coord(cardData.data)[index].lon)}} km</span>
+                            <span v-if="coord(cardData.data)[index].lat !== '0'">📍{{calculateDistance(coord(cardData.data)[index].lat, coord(cardData.data)[index].lon)}} km</span>
                         </div>
-                        <div class="o-card-more">
-                        +
+                        <div v-if="!isHighlight" class="o-card-more">
+                            <span>+</span>
                         </div>
                     </div>
                     <div class="o-card-duration-badge">

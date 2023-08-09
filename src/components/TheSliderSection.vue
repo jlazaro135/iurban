@@ -28,9 +28,10 @@
 <template>
     <section class="c-section__sliders">
         <div class="o-container">
-            <div v-if="!isLoaded">
-                Cargando---
+            <template v-if="!isLoaded">
+                <div class="o-slider-skeleton" v-for="index in 3" :key="index">
             </div>
+            </template>
             <TheSlider v-else 
             v-for="data in cityData.data" 
             :key="data.id" 
