@@ -1,5 +1,5 @@
 .o-slider{
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     &__heading{
         display: inline-block;
         font-weight: 500;
@@ -36,5 +36,9 @@
         &--highlight{
             background-color: $primary;
         }
+    }
+    &:nth-child(even){
+        border-bottom: 1px solid $primary;
+        padding-bottom: 2rem;
     }
 }

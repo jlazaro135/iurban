@@ -17,7 +17,7 @@
         isLoaded.value = true
     } catch (error) {
         console.log(error)
-    }
+        }
     }
 
     fetchData();
@@ -31,10 +31,13 @@
             <div v-if="!isLoaded">
                 Cargando---
             </div>
-            <!-- aquí se tira tantos TheSlider como HomePoints existan -->
-            <template v-else>
-                <TheSlider />
-            </template>
+            <TheSlider v-else 
+            v-for="data in cityData.data" 
+            :key="data.id" 
+            :cardData="data" 
+            :id="data.id"
+            :isHighlight="data.id === 39"
+            />
         </div>
     </section>
 </template>

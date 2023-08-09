@@ -1,7 +1,9 @@
 <script setup>
   import { Splide, SplideSlide } from '@splidejs/vue-splide';
+  import {calculateDistance, coord} from '@/js/distanceCalculator'
   import '@splidejs/vue-splide/css/core';
   import '@splidejs/vue-splide/css';
+
   const options = {
     type   : 'slide',
     perPage: 4,
@@ -15,25 +17,35 @@
       }
     }
   }
+
+const props =  defineProps({
+    cardData: Object,
+    isHighlight: Boolean,
+  })
+
+const {cardData} = props
+
+console.log(cardData)
+
 </script>
 
 <template>
     <div class="o-slider">
-        <h2 class="o-slider__heading o-slider__heading--highlight">
-            Free tours >>
+        <h2 class="o-slider__heading" :class="{'o-slider__heading--highlight': isHighlight}">
+            {{ cardData.name.es }} >>
         </h2>
-        <div class="o-slider__row o-slider__row--highlight">
+        <div class="o-slider__row" :class="{'o-slider__row--highlight': isHighlight}">
             <Splide :options="options" aria-label="My Favorite Images">
-                <!-- Aquí se tiran tantos SplideSlide como haya en el array -->
-                <SplideSlide>
+                <SplideSlide v-for="(slide, index) in cardData.data">
                     <div class="o-card">
                     <div class="o-card-img-wrapper">
-                        <img class="o-card-img" src="https://picsum.photos/500/300.webp" alt="foto" width="500" height="300">
+                        <img class="o-card-img" :src="slide.cover_image ?? slide.image" alt="foto" width="500" height="300">
                     </div>
                     <div class="o-card-desc-wrapper">
                         <div class="o-card-desc">
-                            <span>Palacio de las artes</span>
-                            <span>📍 a 2,2kms</span>
+                            <span>{{slide.name.es}}</span>
+                            
+                            <span>📍 a {{calculateDistance(coord(cardData.data)[index].lat, coord(cardData.data)[index].lon)}} km</span>
                         </div>
                         <div class="o-card-more">
                         +
@@ -41,112 +53,7 @@
                     </div>
                     <div class="o-card-duration-badge">
                         <div class="o-card-duration">
-                        &#x23f2; 1.30h
-                        </div>
-                    </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div class="o-card">
-                    <div class="o-card-img-wrapper">
-                        <img class="o-card-img" src="https://picsum.photos/500/300.webp" alt="foto" width="500" height="300">
-                    </div>
-                    <div class="o-card-desc-wrapper">
-                        <div class="o-card-desc">
-                        <span>Palacio de las artes</span>
-                        <span>📍 a 2,2kms</span>
-                        </div>
-                        <div class="o-card-more">
-                        +
-                        </div>
-                    </div>
-                    <div class="o-card-duration-badge">
-                        <div class="o-card-duration">
-                        &#x23f2; 1.30h
-                        </div>
-                    </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div class="o-card">
-                    <div class="o-card-img-wrapper">
-                        <img class="o-card-img" src="https://picsum.photos/500/300.webp" alt="foto" width="500" height="300">
-                    </div>
-                    <div class="o-card-desc-wrapper">
-                        <div class="o-card-desc">
-                        <span>Palacio de las artes</span>
-                        <span>📍 a 2,2kms</span>
-                        </div>
-                        <div class="o-card-more">
-                        +
-                        </div>
-                    </div>
-                    <div class="o-card-duration-badge">
-                        <div class="o-card-duration">
-                        &#x23f2; 1.30h
-                        </div>
-                    </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div class="o-card">
-                    <div class="o-card-img-wrapper">
-                        <img class="o-card-img" src="https://picsum.photos/500/300.webp" alt="foto" width="500" height="300">
-                    </div>
-                    <div class="o-card-desc-wrapper">
-                        <div class="o-card-desc">
-                        <span>Palacio de las artes</span>
-                        <span>📍 a 2,2kms</span>
-                        </div>
-                        <div class="o-card-more">
-                        +
-                        </div>
-                    </div>
-                    <div class="o-card-duration-badge">
-                        <div class="o-card-duration">
-                        &#x23f2; 1.30h
-                        </div>
-                    </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div class="o-card">
-                    <div class="o-card-img-wrapper">
-                        <img class="o-card-img" src="https://picsum.photos/500/300.webp" alt="foto" width="500" height="300">
-                    </div>
-                    <div class="o-card-desc-wrapper">
-                        <div class="o-card-desc">
-                        <span>Palacio de las artes</span>
-                        <span>📍 a 2,2kms</span>
-                        </div>
-                        <div class="o-card-more">
-                        +
-                        </div>
-                    </div>
-                    <div class="o-card-duration-badge">
-                        <div class="o-card-duration">
-                        &#x23f2; 1.30h
-                        </div>
-                    </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div class="o-card">
-                    <div class="o-card-img-wrapper">
-                        <img class="o-card-img" src="https://picsum.photos/500/300.webp" alt="foto" width="500" height="300">
-                    </div>
-                    <div class="o-card-desc-wrapper">
-                        <div class="o-card-desc">
-                        <span>Palacio de las artes</span>
-                        <span>📍 a 2,2kms</span>
-                        </div>
-                        <div class="o-card-more">
-                        +
-                        </div>
-                    </div>
-                    <div class="o-card-duration-badge">
-                        <div class="o-card-duration">
-                        &#x23f2; 1.30h
+                        &#x23f2; {{slide.durationc}}
                         </div>
                     </div>
                     </div>
