@@ -1,4 +1,13 @@
 <script setup>
+    import { translations } from '@/js/translations';
+    import { useLangStore } from '@/store/lang.js'
+    import {storeToRefs} from 'pinia'
+
+    const useLang = useLangStore()
+    const {selectedLang} = storeToRefs(useLang)
+
+    const { subtitle } = translations
+    
 </script>
 
 <template>
@@ -10,7 +19,7 @@
             </picture>
             <div class="o-container c-section__hero-text-wrapper">
                 <h1 class="c-section__hero-heading">Valencia</h1>
-                <p class="c-section__hero-subheading">Descubre cómo podrías informar y registrar a los turistas con nuestra inteligencia artificial 24/7</p>
+                <p class="c-section__hero-subheading">{{ subtitle[selectedLang] }}</p>
             </div>
         </div>
     </section>

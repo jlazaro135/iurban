@@ -1,7 +1,14 @@
 <script setup>
-  import WorldwideIcon from '@/assets/icons/WorldwideIcon.vue'
-  import RouteIcon from '@/assets/icons/RouteIcon.vue'
-  import CogIcon from '@/assets/icons/CogIcon.vue';
+    import WorldwideIcon from '@/assets/icons/WorldwideIcon.vue'
+    import RouteIcon from '@/assets/icons/RouteIcon.vue'
+    import CogIcon from '@/assets/icons/CogIcon.vue';
+    import { translations } from '@/js/translations';
+    import { useLangStore } from '@/store/lang.js'
+    import {storeToRefs} from 'pinia'
+
+    const useLang = useLangStore()
+    const {selectedLang} = storeToRefs(useLang)
+    const { info } = translations
 
 </script>
 
@@ -12,13 +19,13 @@
             <div class="o-pill o-pill--secondary">
                 <WorldwideIcon />
                 <p>
-                Configura tu ruta mediante nuestra Inteligencia Artificial
+                    {{ info.pill_1[selectedLang] }}
                 </p>
             </div>
             <div class="o-pill o-pill--primary">
                 <RouteIcon />
                 <p>
-                Consulta rutas prediseñadas por expertos guías locales
+                    {{ info.pill_1[selectedLang] }}
                 </p>
             </div>
             </div>
