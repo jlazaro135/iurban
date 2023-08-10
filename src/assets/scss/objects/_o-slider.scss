@@ -4,7 +4,7 @@
         display: inline-block;
         font-weight: 500;
         margin: 0;
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
         border-radius: 10px 10px 0 0;
         &--highlight{
             background-color: $primary;
@@ -37,7 +37,7 @@
             background-color: $primary;
         }
     }
-    &:nth-child(even){
+    &:nth-child(even):not(:last-child){
         border-bottom: 1px solid $primary;
         padding-bottom: 2rem;
     }

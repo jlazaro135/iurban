@@ -17,12 +17,12 @@ export const translations = {
             en: 'Consult pre-designed routes by expert local guides'
         },
         route_personalization: {
-            es: 'Filtro',
-            en: 'Filter'
-        },
-        filter: {
             es: 'También puedes crear tu propia ruta, desde cero:',
             en: 'You can also create your own route, from scratch:'
+        },
+        filter: {
+            es: 'Filtro',
+            en: 'Filter'
         }
     }
 }

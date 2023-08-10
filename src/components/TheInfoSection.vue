@@ -30,10 +30,10 @@
             </div>
             </div>
             <div class="c-section__info-filter o-flex o-flex-jcb o-flex-aic o-gap-2">
-            <p class="c-section__info-para">También puedes crear tu propia ruta, desde cero:</p>
+            <p class="c-section__info-para">{{ info.route_personalization[selectedLang] }}</p>
             <div class="o-btn o-btn__primary">
                 <CogIcon/>
-                <span>Filtro</span>
+                <span>{{ info.filter[selectedLang] }}</span>
             </div>
             </div>
         </div>

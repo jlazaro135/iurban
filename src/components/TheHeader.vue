@@ -32,8 +32,8 @@
           <HomeIcon />
           <img class="c-header__logo" src="@/assets/imgs/logo_valencia.png" alt="logo valencia">
           <div class="c-header__language-wrapper">
-              <img class="c-header__flag" :class="{active: isSpanish}" src="@/assets/imgs/spain-flag.png" alt="ingles" @click="handleClick" id="es">
-              <img class="c-header__flag" :class="{active: !isSpanish}" src="@/assets/imgs/uk-flag.png" alt="espanol" @click="handleClick" id="en">
+              <img class="c-header__flag" :class="{active: isSpanish}" src="@/assets/imgs/spain-flag.png" alt="ingles" @click="handleClick" id="es" width="50" height="50">
+              <img class="c-header__flag" :class="{active: !isSpanish}" src="@/assets/imgs/uk-flag.png" alt="espanol" @click="handleClick" id="en" width="50" height="50">
             </div>
         </div>
         </div>

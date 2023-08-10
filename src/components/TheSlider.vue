@@ -42,7 +42,7 @@
                             <span>+</span>
                         </div>
                     </div>
-                    <div class="o-card-duration-badge">
+                    <div v-if="slide.durationc" class="o-card-duration-badge">
                         <div class="o-card-duration">
                         &#x23f2; {{slide.durationc}}
                         </div>

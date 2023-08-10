@@ -1,29 +1,13 @@
 # iurban
 
-This template should help get you started developing with Vue 3 in Vite.
+- La tecnología utilizada para desarrollar este proyecto ha sido Vuejs 3, con Composition API.
 
-## Recommended IDE Setup
+- Se ha utilizado el preprocesador SCSS y he aplicado la metodología BEMIT para la parte de los estilos.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Para los silders o carousels se ha usado la información que viene en la key "HomePoints".
 
-## Customize configuration
+- El selector de idioma funciona y carga los textos correspondientes. 
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Las imágenes que no vienen de API, han sido incorporadas como assets del proyecto y han sido obtenidas a través del banco de imágenes Unsplash.
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- El slider se  ha implementado con la librería Splidejs

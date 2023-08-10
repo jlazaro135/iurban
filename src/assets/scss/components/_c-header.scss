@@ -18,13 +18,15 @@
       margin-left: auto;
     }
     &__flag{
+      width: 100%;
+      height: auto;
       max-width: 2.5rem;
       padding: 0.1rem;
       border-radius: 50%;
       cursor: pointer;
       border: 3px solid transparent;
       &.active{
-        border-color: #3ae002 
+        border-color: #2BFFDC 
       }
     }
   }
