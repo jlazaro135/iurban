@@ -1,4 +1,9 @@
+
 # iurban
+
+Para iniciar este proyecto, simplemente clonar y tirar los comandos npm install y npm run build. Automáticamente te levantara un servidor local donde podrás ver la web.
+
+CONSIDERACIONES:
 
 - La tecnología utilizada para desarrollar este proyecto ha sido Vuejs 3, con Composition API.
 
